@@ -14,14 +14,12 @@ function printPyramid(height) {
 } // printPyramid
 
 document.getElementById('select1').addEventListener("click", function () {
+	let s1 = '&nbsp;&nbsp;&nbsp;&nbsp'
+	let s2 = '&nbsp;&nbsp;&nbsp'
+	let s3 = '&nbsp;&nbsp'
 	val = document.getElementById('select1').value
-	if (val == '@') {
-		symb = '&nbsp;&nbsp;&nbsp;&nbsp'
-	} else if (val == 'X' ) {
-		symb = '&nbsp;&nbsp;&nbsp'
-	} else if (val == '#' || val == '$') {
-		symb = '&nbsp;&nbsp'
-	}
+	val == '@' ? symb = s1 : val == 'X' ? symb = s2: val == '#' || val == '$' ? symb = s3 : s3
+	// spaces for each symbol
 	printPyramid(document.getElementById('input').value)
 }) //select1 click
 
