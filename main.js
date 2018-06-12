@@ -14,6 +14,7 @@ function printPyramid(height) {
 } // printPyramid
 
 document.getElementById('select1').addEventListener("click", function () {
+	val = document.getElementById('select1').value
 	val == '@' ? symb = '&nbsp;&nbsp;&nbsp;&nbsp' : val == 'X' ? symb = '&nbsp;&nbsp;&nbsp': val == '#' || val == '$' ? symb = '&nbsp;&nbsp;' : '&nbsp;&nbsp;'
 	// spaces for each symbol
 	printPyramid(document.getElementById('input').value)
