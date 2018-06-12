@@ -4,7 +4,7 @@ var symb = '&nbsp;&nbsp'
 
 function printPyramid(height) {
 	let str = val
-	document.getElementById('pyramid').innerHTML = ''
+	pyramid.innerHTML = ''
 	for (let j = height; j!=0; j--) {
 		str = str + val
 		let par = document.createElement('p')
@@ -14,7 +14,6 @@ function printPyramid(height) {
 } // printPyramid
 
 document.getElementById('select1').addEventListener("click", function () {
-	val = document.getElementById('select1').value
 	val == '@' ? symb = '&nbsp;&nbsp;&nbsp;&nbsp' : val == 'X' ? symb = '&nbsp;&nbsp;&nbsp': val == '#' || val == '$' ? symb = '&nbsp;&nbsp;' : '&nbsp;&nbsp;'
 	// spaces for each symbol
 	printPyramid(document.getElementById('input').value)
